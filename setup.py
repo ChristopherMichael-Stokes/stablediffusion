@@ -1,13 +1,15 @@
 from setuptools import setup, find_packages
 
-setup(
-    name='stable-diffusion',
-    version='0.0.1',
-    description='',
-    packages=find_packages(),
-    install_requires=[
-        'torch',
-        'numpy',
-        'tqdm',
-    ],
-)
+
+if __name__=='__main__':
+    setup(
+        name='ldm',
+        version='1.0.0',
+        description='Latent diffusion models',
+        packages=find_packages(exclude=('test',)),
+        install_requires=[
+            'torch',
+            'numpy',
+            'tqdm',
+        ],
+    )
